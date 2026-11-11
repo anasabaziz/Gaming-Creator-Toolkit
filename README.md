@@ -97,10 +97,10 @@ To update, preserve these local folders, update canonical source files, run rele
 
 The renderer currently supports SDR square-pixel unrotated footage, timed trims, CFR output, static crops/panels and the effects documented in [composition](skills/_video-shared/composition.md). Shotcut timing is editable; framing/effects are baked into cached segment media. Keep those dependencies with the project. HDR, animated crop tracking, native editable effects and general transitions are not implied. Native image-generation dimensions vary and must be checked. No process automatically publishes to a CMS/social platform, refreshes article archives, deletes media or starts backups.
 
-## License and first publication
+## License and releases
 
 [MIT](LICENSE) permits reuse, modifications, commercial use and closed-source derivatives while retaining its copyright and permission notice. You do not have to publish your modifications. See [third-party notices](THIRD_PARTY_NOTICES.md) for separately installed dependencies and asset rights.
 
 The original copyright holder is [anasabaziz](https://github.com/anasabaziz), as recorded in the license. Forks retain that original notice.
 
-For manual upload to GitHub under [anasabaziz](https://github.com/anasabaziz), upload this folder's contents at the repository root, including `.github/` and `.gitignore`. No ZIP or `dist/` folder is needed. Follow [release readiness and manual upload](setup/release.md). The toolkit remains a release candidate until its documented checks pass; no GitHub repository or external upload is created by these scripts.
+The source repository is [Gaming Creator Toolkit](https://github.com/anasabaziz/Gaming-Creator-Toolkit). See [release readiness](setup/release.md) for maintaining the public inventory and preparing releases. The toolkit remains a release candidate until its documented checks pass. These scripts do not publish or upload files.

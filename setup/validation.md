@@ -32,6 +32,8 @@ Verified locally on Windows on 2026-11-10 using Python 3.12.10, FFmpeg/FFprobe n
 
 The 86 unit/integration tests include a synthetic end-to-end dashboard generate/edit/save/refresh cycle with idempotent decision import. This verifies workbook structures and Python behavior, not Excel/LibreOffice GUI compatibility. All media inputs were synthetic; no creator recording or personal profile was processed. Public evidence is summarized here without machine-specific paths or private logs.
 
-No macOS/Linux runners, live Codex/Claude Code/Grok installation session, Shotcut GUI/full-output perceptual review, or Excel/LibreOffice GUI round-trip was performed in this assembly. These release checks remain pending. The CI workflow has been parsed but has not run on GitHub.
+No macOS/Linux runners, live Codex/Claude Code/Grok installation session, Shotcut GUI/full-output perceptual review, or Excel/LibreOffice GUI round-trip was performed in this assembly. These release checks remain pending in the recorded evidence. At assembly time, the CI workflow had been parsed but had not run on GitHub. Consult repository Actions for subsequent runs and record verified results in `validation.json` before changing release status.
 
 On 2026-11-11, the owner supplied [anasabaziz](https://github.com/anasabaziz) as the toolkit creator profile. The copyright notice and publication documentation now use that identity. This documentation update does not change the compatibility results above.
+
+On 2026-11-11, the owner confirmed the initial repository upload. First-upload instructions and the completed license-holder setup helper were retired, and `.gitattributes` was added to the public inventory. Publication does not change the compatibility results above.

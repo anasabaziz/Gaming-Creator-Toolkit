@@ -41,7 +41,7 @@ def audit(root, release=False):
     private_path = re.compile(r'[A-Za-z]:[/\\]Users[/\\][^/\\\s"\']+|/(?:Users|home)/[A-Za-z0-9_.-]+/')
     secret = re.compile(r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|\bgh[pousr]_[A-Za-z0-9]{30,}')
     for path in files:
-        if path.suffix not in TEXT and path.name not in ('LICENSE', '.gitignore'):
+        if path.suffix not in TEXT and path.name not in ('LICENSE', '.gitignore', '.gitattributes'):
             errors.append('Unexpected public file type: ' + path.name)
             continue
         text = path.read_text(encoding='utf-8')

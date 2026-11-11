@@ -1,4 +1,5 @@
 [
+  ".gitattributes",
   ".github/workflows/validate.yml",
   ".gitignore",
   "AGENTS.md",
@@ -25,7 +26,6 @@
   "scripts/doctor.py",
   "scripts/install.py",
   "scripts/package.py",
-  "scripts/set_license_holder.py",
   "setup/dependencies.md",
   "setup/onboarding.md",
   "setup/platform-guides/claude-code.md",

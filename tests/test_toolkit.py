@@ -17,7 +17,6 @@ import configure
 import install
 import check_package
 import package
-import set_license_holder
 import build_workbook
 import job_dashboard
 from openpyxl import load_workbook
@@ -118,17 +117,16 @@ class ToolkitTests(unittest.TestCase):
 
     def test_release_requires_original_notice_and_platform_evidence(self):
         self.copy_public()
-        # Exercise first-publication setup independently of the finalized public notice.
+        # Publication does not waive the license or compatibility release gates.
         license_path = self.root / 'LICENSE'
+        original_notice = license_path.read_text(encoding='utf-8')
         license_path.write_text('MIT License\n\nCopyright (c) 2026 [ORIGINAL_GITHUB_UPLOADER]\n', encoding='utf-8')
         errors = check_package.audit(self.root, release=True)['errors']
         self.assertTrue(any('license' in e for e in errors))
-        set_license_holder.set_holder(self.root, 'fictional-uploader')
+        license_path.write_text(original_notice, encoding='utf-8')
         errors = check_package.audit(self.root, release=True)['errors']
         self.assertFalse(any('license' in e for e in errors))
         self.assertTrue(any('Release verification pending' in e for e in errors))
-        with self.assertRaises(ValueError):
-            set_license_holder.set_holder(self.root, 'different-fork-owner')
 
 
 class WorkbookTests(unittest.TestCase):
