@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gameplay Trailers"
+  short_description: "Assemble gameplay trailers and optional roundups"
+  default_prompt: "Use $gameplay-trailers to create a gameplay trailer from existing selections, following the requested coverage and ordering."

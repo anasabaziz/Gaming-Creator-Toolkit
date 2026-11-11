@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "release_checks": {
+    "windows_helpers_dashboard": {"status": "passed", "evidence": "setup/validation.md — 2026-11-10: 12 package/integration and 18 dashboard tests passed on Python 3.12.10; GUI validation remains separate"},
+    "windows_media": {"status": "passed", "evidence": "setup/validation.md — 2026-11-10: 56 shared tests plus article extraction passed with FFmpeg n9.0.2-12 and MLT 7.41.0; perceptual checks remain separate"},
+    "macos_helpers_dashboard": {"status": "pending", "evidence": ""},
+    "macos_media": {"status": "pending", "evidence": ""},
+    "linux_helpers_dashboard": {"status": "pending", "evidence": ""},
+    "linux_media": {"status": "pending", "evidence": ""},
+    "codex_live_onboarding": {"status": "pending", "evidence": ""},
+    "claude_code_live_onboarding": {"status": "pending", "evidence": ""},
+    "grok_live_import_and_workflow": {"status": "pending", "evidence": ""},
+    "shotcut_gui_and_media_review": {"status": "pending", "evidence": ""},
+    "dashboard_excel_libreoffice_roundtrip": {"status": "pending", "evidence": ""}
+  }
+}

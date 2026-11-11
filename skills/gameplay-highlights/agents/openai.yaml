@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gameplay Highlights"
+  short_description: "Select and export meaningful gameplay highlights"
+  default_prompt: "Use $gameplay-highlights to select distinct highlights from my gameplay recording and create 30-60 second clips with Shotcut projects."

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="860" viewBox="0 0 1440 860" role="img" aria-labelledby="title desc">
+  <title id="title">From game recording to creator content</title>
+  <desc id="desc">A game recording supplies highlights, trailers, thumbnail reference frames, and article screenshot evidence. Articles also need your draft write-up or firsthand notes. An existing highlight or trailer can be converted to a portrait video when requested.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #172c46; text-anchor: middle; }
+      .title { font-size: 38px; font-weight: 700; }
+      .heading { font-size: 25px; font-weight: 700; }
+      .body { font-size: 20px; }
+      .small { font-size: 18px; fill: #475569; }
+      .line { fill: none; stroke: #64748b; stroke-width: 3; marker-end: url(#arrow); }
+      .output { fill: #fff; stroke: #b7c9da; stroke-width: 2; }
+    </style>
+  </defs>
+  <rect width="1440" height="860" fill="#f5f8fc"/>
+  <text class="title" x="720" y="65">From game recording to creator content</text>
+  <text class="body" x="720" y="104">Choose the outputs you want. One recording can support several.</text>
+
+  <rect x="320" y="155" width="420" height="115" rx="20" fill="#dceeff" stroke="#6d9fc9" stroke-width="2"/>
+  <text class="heading" x="530" y="201">Game recording</text>
+  <text class="body" x="530" y="238">Start with your gameplay footage</text>
+
+  <rect x="1070" y="155" width="320" height="115" rx="20" fill="#fff0d7" stroke="#d5ac65" stroke-width="2"/>
+  <text class="heading" x="1230" y="196">Your draft write-up</text>
+  <text class="body" x="1230" y="227">or firsthand gameplay notes</text>
+  <text class="small" x="1230" y="253">Also needed for articles</text>
+
+  <path d="M530 270 V320 H195 V395" class="line"/>
+  <path d="M530 270 V395" class="line"/>
+  <path d="M530 320 H875 V395" class="line"/>
+  <path d="M875 320 H1140 V395" class="line"/>
+  <path d="M1290 270 V395" class="line"/>
+  <text class="small" x="875" y="357">Reference frames</text>
+  <text class="small" x="1117" y="357">Screenshots</text>
+
+  <rect class="output" x="50" y="400" width="290" height="145" rx="18"/>
+  <text class="heading" x="195" y="448">Highlight clips</text>
+  <text class="body" x="195" y="484">Selected gameplay moments</text>
+  <text class="small" x="195" y="517">MP4 + editable project</text>
+
+  <rect class="output" x="385" y="400" width="290" height="145" rx="18"/>
+  <text class="heading" x="530" y="448">Trailer</text>
+  <text class="body" x="530" y="484">An edited gameplay montage</text>
+  <text class="small" x="530" y="517">MP4 + editable project</text>
+
+  <rect class="output" x="730" y="400" width="290" height="145" rx="18"/>
+  <text class="heading" x="875" y="448">Thumbnail</text>
+  <text class="body" x="875" y="484">Cover artwork for your video</text>
+  <text class="small" x="875" y="517">Image file</text>
+
+  <rect class="output" x="1070" y="400" width="320" height="145" rx="18"/>
+  <text class="heading" x="1230" y="448">Article</text>
+  <text class="body" x="1230" y="484">Your writing, developed</text>
+  <text class="small" x="1230" y="517">Markdown / HTML + SEO</text>
+
+  <path d="M195 545 V585 H310 V640" class="line"/>
+  <path d="M530 545 V585 H420 V640" class="line"/>
+  <rect x="150" y="645" width="430" height="112" rx="18" fill="#e1f3e9" stroke="#80b498" stroke-width="2"/>
+  <text class="heading" x="365" y="690">Portrait video (9:16)</text>
+  <text class="body" x="365" y="725">Convert an existing edit, if requested</text>
+
+  <text class="small" x="1055" y="620">Thumbnails can also start from game art.</text>
+  <text class="small" x="1055" y="652">Articles use your writing for experiences and opinions;</text>
+  <text class="small" x="1055" y="680">footage supplies supporting screenshots.</text>
+  <text class="small" x="720" y="820">Gaming Creator Toolkit · Create the content you need, then review it before sharing.</text>
+</svg>

@@ -1,0 +1,7 @@
+{
+  "name": "gaming-creator-toolkit",
+  "version": "0.1.0",
+  "profile_schema": 1,
+  "skills": ["gameplay-highlights", "gameplay-trailers", "horizontal-to-vertical", "game-thumbnails", "gameplay-articles"],
+  "release_status": "candidate"
+}

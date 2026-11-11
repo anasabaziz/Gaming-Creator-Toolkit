@@ -1,0 +1,30 @@
+---
+name: game-thumbnails
+description: Create or revise game-video thumbnails from gameplay, game-art references or an existing thumbnail. Use for thumbnail composition, text removal and art-style corrections; not video editing or general image generation.
+---
+
+# Game thumbnails
+
+Before production, follow [first-run customization](../../setup/onboarding.md). Read this project's confirmed relevant profiles in `.creator-toolkit/`; do not treat example templates or another creator's settings as confirmed. Run `python scripts/configure.py status --skill game-thumbnails` from the toolkit root. If not ready, ask for customization and confirmation before producing deliverables. Planning and installation may continue.
+
+For new production and affected revisions, follow [structured production checks](../_video-shared/review-workflow.md). Use the `thumbnail` checklist for requested coverage/corrections, actual dimensions, composition, applicable text/color requirements and game-art fidelity. Keep instruction/reference revisions and image evidence with the job. Follow any local workflow profile for optional post-delivery reviewer choice and separate acceptance.
+
+Follow [whole-job records and recovery](../_video-shared/job-workflow.md) without loading the video renderer. Record reference/brief revisions, generated variants, correction notes, actual dimensions and the accepted artifact. Check available results before retrying an uncertain image-generation call. Use the thumbnail-corrections case for brief/revision-rule changes.
+
+Defaults: no text, no overall color cast, rule-of-thirds composition, and fidelity to the game's art style. The latest user request overrides these defaults. Keep revisions within this skill.
+
+Assign a role to each reference in the brief: subject/game geometry, art style, composition, or branding. A title capsule used for atmosphere does not authorize its lettering or logos in a text-free cover. Inspect the final saved image at native and small display sizes against these roles, and deliver a durable job-local copy with the exact variant identified; a temporary generation preview is not the saved deliverable.
+
+1. Read only the relevant job summary or supplied references: confirmed game name, platform/aspect ratio, reference-image paths and requested change. Existing thumbnails and selected frames usually suffice; do not load the video pipeline or rescan recordings unnecessarily.
+2. Inspect the reference images. Assemble all applicable constraints in the first generation/edit brief. Do not invent logos, branding or game imagery presented as an actual screenshot.
+3. Use the image-generation/editing integration configured during onboarding and follow its native tool requirements. On Codex, use the installed imagegen skill when available. Other agents may use their supported image tool or an explicitly configured external integration; do not assume the same tool names or API access. If no integration is available, prepare the brief and record generation as blocked; a brief is not a finished thumbnail. A subscription alone does not establish tool access. Do not add paid services or request credentials implicitly. Save any returned generation ID/status. If a response is lost, inspect available results; if the outcome cannot be determined, record it as unknown and hand off that uncertainty rather than automatically issuing another potentially billed call.
+4. For revisions, reuse the existing image and change only the requested elements. Apply photographic instructions about skin, lighting, camera or depth of field only when relevant to the subject and intended art style.
+5. Review the result for composition, text absence unless requested, color and recognizable game-art fidelity. Each correction attempt must identify a failed criterion and a materially changed brief, reference or supported export approach. Stop when criteria pass or no credible improvement remains; preserve the best revision and report unresolved requirements as incomplete. Do not regenerate merely to repeat an unchanged approach. Deliver the image and save the brief/reference paths and correction history; record acceptance only when explicitly given.
+
+If an additional gameplay frame is necessary, use only the shared pipeline's `inspect` command for a narrow known range. No video rerender is needed. No publishing/upload is implied beyond the requested image-generation service.
+
+For a portrait cover derived from a landscape thumbnail, use the latest accepted artwork and its correction notes. Recompose the scene for the requested aspect ratio without stretching, adding bars or losing the focal subject. Carry forward corrections and check small-screen readability and the delivered file's actual dimensions; a requested size is not proof of the generated size. Distinguish text-free cover artwork from a supplied title capsule/logo used inside a video. A video-title request does not change the no-text cover default. Store dimensions, selected revision and correction notes with the brief.
+
+Before generation, distinguish an exact pixel-size request from an aspect-ratio request. If no exact dimensions are required, use a documented relative aspect-ratio tolerance of 0.1% (unless the user specifies another tolerance), accommodating ordinary generator rounding. Record actual width/height and aspect error; do not call an approximate ratio exact. For example, 1672 × 941 falls within 0.1% of 16:9 but is not an exact 16:9 raster. An exact request must match both dimensions; use the permitted image workflow for a necessary platform export and retain the generated master. Do not regenerate a good image solely to remove rounding within the agreed tolerance. `job_helpers.py dimensions` can inspect metadata without loading video rendering or changing the image. Keep this criterion in the dimensions check before generation.
+
+When a local job dashboard is configured, follow [dashboard tracking](../_video-shared/dashboard-workflow.md) at resumption and before delivery. Preserve exact-revision human attestations and durable history independently of removable job files.

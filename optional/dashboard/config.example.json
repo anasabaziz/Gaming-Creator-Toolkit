@@ -1,0 +1,6 @@
+{
+  "scan_folders": ["jobs"],
+  "excluded_journals": [],
+  "game_names": {},
+  "job_metadata": {}
+}

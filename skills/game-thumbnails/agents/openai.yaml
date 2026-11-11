@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Thumbnails"
+  short_description: "Create and revise thumbnails faithful to game artwork"
+  default_prompt: "Use $game-thumbnails to create a game-video thumbnail with no text, no overall color cast, rule-of-thirds composition and fidelity to the game art."

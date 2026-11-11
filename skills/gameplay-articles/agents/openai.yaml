@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gameplay Articles"
+  short_description: "Write articles with gameplay evidence and screenshots"
+  default_prompt: "Use $gameplay-articles to turn my notes and Review & Select evidence into Markdown and HTML articles using my site profile."

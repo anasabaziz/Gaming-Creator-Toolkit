@@ -1,0 +1,4 @@
+interface:
+  display_name: "Horizontal to Vertical"
+  short_description: "Reframe gameplay edits into readable portrait videos"
+  default_prompt: "Use $horizontal-to-vertical to convert this horizontal trailer to vertical while preserving its timing and essential gameplay context."

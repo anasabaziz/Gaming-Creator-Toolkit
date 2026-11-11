@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "checks": {
+    "coverage": {"methods": ["editorial_inspection"], "capability": "editorial"},
+    "technical": {"methods": ["automated_validation"], "capability": "technical"},
+    "visual": {"methods": ["visual_inspection"], "capability": "visual"},
+    "playback": {"methods": ["continuous_playback"], "capability": "playback"},
+    "framing": {"methods": ["full_interval_inspection"], "capability": "playback"},
+    "audio": {"methods": ["listening", "exemption"], "capability": "listening", "allow_na": true},
+    "project": {"methods": ["project_comparison"], "capability": "project_comparison"},
+    "project_gui": {"methods": ["gui_open_and_seek"], "capability": "project_gui"},
+    "dimensions": {"methods": ["metadata_inspection"], "capability": "technical"},
+    "claims": {"methods": ["editorial_inspection"], "capability": "editorial"},
+    "package": {"methods": ["package_inspection"], "capability": "editorial"},
+    "screenshots": {"methods": ["visual_inspection", "exemption"], "capability": "visual", "allow_na": true},
+    "seo": {"methods": ["editorial_inspection"], "capability": "editorial"}
+  },
+  "deliverables": {
+    "highlight": ["coverage", "technical", "visual", "playback", "audio", "project", "project_gui"],
+    "trailer": ["coverage", "technical", "visual", "playback", "audio", "project", "project_gui"],
+    "vertical": ["coverage", "technical", "visual", "framing", "audio", "project", "project_gui"],
+    "thumbnail": ["coverage", "dimensions", "visual"],
+    "article": ["claims", "package", "screenshots", "seo"]
+  }
+}

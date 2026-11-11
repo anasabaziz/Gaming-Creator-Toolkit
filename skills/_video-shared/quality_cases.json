@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "optional-review-choice",
+      "skill": "shared-workflow",
+      "request": "Finish and deliver the requested game thumbnail using game-thumbnails.",
+      "fixture": {
+        "production_skill": "game-thumbnails",
+        "producer_checks": "passed",
+        "separate_review_requested": false,
+        "user_response": null
+      },
+      "criteria": [
+        "Ask the post-delivery review-choice question without spawning a reviewer",
+        "Keep producer completion separate from pending optional review",
+        "Do not infer review or acceptance from silence"
+      ]
+    },
+    {
+      "id": "inquiry-outside-production",
+      "skill": "shared-workflow",
+      "request": "Explain how the gameplay-trailers skill selects footage; do not create a trailer.",
+      "fixture": {
+        "production_requested": false
+      },
+      "criteria": [
+        "Answer the inquiry without activating producer/reviewer/acceptor roles",
+        "Do not require a production journal, post-delivery review-choice question or formal acceptance records",
+        "Do not process media merely to explain the workflow"
+      ]
+    },
+    {
+      "id": "maintenance-outside-production",
+      "skill": "shared-workflow",
+      "request": "Update the gameplay-highlights instructions and fix the associated helper script.",
+      "fixture": {
+        "production_requested": false,
+        "separate_review_requested": false,
+        "improvement_procedure_requested": false
+      },
+      "criteria": [
+        "Perform authorized maintenance with appropriate validation",
+        "Do not require production roles, a production journal, a post-delivery review-choice question or formal acceptance records",
+        "Do not require the optional proposal/evaluation/decision procedure or launch a separate reviewer"
+      ]
+    },
+    {
+      "id": "other-work-outside-production",
+      "skill": "shared-workflow",
+      "request": "Fix a broken reference link in a creator project document.",
+      "fixture": {
+        "production_requested": false
+      },
+      "criteria": [
+        "Handle the edit as an ordinary task and check the corrected link",
+        "Do not activate production roles or require a production journal, post-delivery review-choice question or formal acceptance records"
+      ]
+    },
+    {
+      "id": "stale-review",
+      "skill": "shared-workflow",
+      "request": "Revise the closing shot.",
+      "fixture": {
+        "reviewed_revision": "r1",
+        "delivered_revision": "r2",
+        "closing_shot_changed": true
+      },
+      "criteria": [
+        "Keep old review attached to r1",
+        "Recheck affected scope against r2 or record unverified",
+        "Do not restart unrelated discovery"
+      ]
+    },
+    {
+      "id": "missing-listening",
+      "skill": "shared-workflow",
+      "request": "Complete the trailer with original audio.",
+      "fixture": {
+        "audio_stream": "present",
+        "listening_capability": "unavailable"
+      },
+      "criteria": [
+        "Do not equate stream presence with listening",
+        "Record listening unverified and an appropriate handoff"
+      ]
+    },
+    {
+      "id": "instruction-change",
+      "skill": "shared-workflow",
+      "request": "Resume the existing job.",
+      "fixture": {
+        "profile_changed": true,
+        "accepted_output_exists": true
+      },
+      "criteria": [
+        "Compare applicable instruction baselines and assess impact",
+        "Preserve accepted output and current user requirements",
+        "Do not rerender merely because a hash changed"
+      ]
+    },
+    {
+      "id": "archive-copy-only",
+      "skill": "shared-workflow",
+      "request": "Check the archive status.",
+      "fixture": {
+        "destination_hashes": "passed",
+        "restore_playback": "not checked",
+        "independent_storage": "unknown"
+      },
+      "criteria": [
+        "Report copy integrity separately from restoration and independence",
+        "Do not claim a verified independent backup or authorize deletion"
+      ]
+    },
+    {
+      "id": "highlight-payoff",
+      "skill": "gameplay-highlights",
+      "request": "Select one complete highlight from the reviewed sequence.",
+      "fixture": {
+        "reviewed_events": [
+          {
+            "in": 10,
+            "out": 18,
+            "event": "setup"
+          },
+          {
+            "in": 18,
+            "out": 25,
+            "event": "action"
+          },
+          {
+            "in": 25,
+            "out": 29,
+            "event": "result"
+          }
+        ],
+        "candidate": {
+          "in": 18,
+          "out": 25
+        }
+      },
+      "criteria": [
+        "Retain enough setup and the result, or explicitly mark incomplete evidence",
+        "Do not invent events outside reviewed coverage"
+      ]
+    },
+    {
+      "id": "trailer-coverage",
+      "skill": "gameplay-trailers",
+      "request": "Shorten the trailer while preserving combat, upgrade choice and the ending.",
+      "fixture": {
+        "requirements": [
+          "combat",
+          "upgrade choice",
+          "ending"
+        ],
+        "revised_segments": [
+          {
+            "feature": "combat",
+            "duration": 15
+          },
+          {
+            "feature": "ending",
+            "duration": 5
+          }
+        ]
+      },
+      "criteria": [
+        "Detect missing upgrade coverage",
+        "Revise selection or report the conflict before completion",
+        "Separate user-required coverage from producer-selected variety; replacement permission is not a waiver"
+      ]
+    },
+    {
+      "id": "vertical-hud",
+      "skill": "horizontal-to-vertical",
+      "request": "Reframe this segment while retaining dialogue and HUD.",
+      "fixture": {
+        "source_size": [
+          1920,
+          1080
+        ],
+        "crop": [
+          656,
+          0,
+          608,
+          1080
+        ],
+        "observations": [
+          {
+            "time": 0,
+            "essential_rect": [
+              800,
+              400,
+              200,
+              200
+            ]
+          },
+          {
+            "time": 8,
+            "essential_rect": [
+              50,
+              900,
+              500,
+              100
+            ]
+          }
+        ]
+      },
+      "criteria": [
+        "Detect that the later essential region lies outside the crop",
+        "Review the full interval and propose a readable supported layout or state the conflict",
+        "Do not claim visual playback from these synthetic coordinates",
+        "Check transient text, shake and modal changes at panel seams; fixed HUD coordinates do not prove coverage"
+      ]
+    },
+    {
+      "id": "thumbnail-corrections",
+      "skill": "game-thumbnails",
+      "request": "Adapt the accepted landscape artwork to portrait.",
+      "fixture": {
+        "accepted_constraints": [
+          "no text",
+          "no overall colour cast",
+          "flat illustrated game art"
+        ],
+        "proposed_brief": "Photorealistic portrait with a large title and orange colour grading"
+      },
+      "criteria": [
+        "Carry forward all accepted constraints",
+        "Revise the brief and use accepted artwork as reference",
+        "Do not claim an image was generated or visually verified"
+      ]
+    },
+    {
+      "id": "article-claims",
+      "skill": "gameplay-articles",
+      "request": "Draft from my notes and reviewed footage.",
+      "fixture": {
+        "user_note": "Performance felt smooth in my session",
+        "reviewed_evidence": "One still frame at 12 seconds",
+        "proposed_claim": "The full game runs flawlessly on all hardware"
+      },
+      "criteria": [
+        "Keep experience attributed and scoped to the session",
+        "Do not infer performance across the game or hardware from a frame",
+        "Keep unresolved evidence issues out of definitive published prose"
+      ]
+    },
+    {
+      "id": "acceptance-with-gaps",
+      "skill": "shared-workflow",
+      "request": "Looks good; all jobs are completed.",
+      "fixture": {
+        "delivered_revision": "r1",
+        "audio": "unverified"
+      },
+      "criteria": [
+        "Record acceptance and closure against r1",
+        "Preserve audio as unverified and do not create review passes",
+        "Do not reopen accepted media merely for bookkeeping"
+      ]
+    },
+    {
+      "id": "human-partial-check",
+      "skill": "shared-workflow",
+      "request": "I listened to the first five seconds.",
+      "fixture": {
+        "duration": 60
+      },
+      "criteria": [
+        "Preserve the actual report and partial coverage",
+        "Do not pass whole-artifact listening",
+        "Keep independent review and acceptance separate"
+      ]
+    },
+    {
+      "id": "thumbnail-dimensions",
+      "skill": "game-thumbnails",
+      "request": "Make a 16:9 thumbnail; no exact size specified.",
+      "fixture": {
+        "dimensions": [
+          1672,
+          941
+        ],
+        "relative_tolerance": 0.001
+      },
+      "criteria": [
+        "Record measured dimensions and tolerance before claiming compliance",
+        "Accept rounding within tolerance without calling it exact",
+        "An exact 1280x720 request would require a separate compliant export"
+      ]
+    }
+  ]
+}

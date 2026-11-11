@@ -1,0 +1,25 @@
+# Personal configuration, credentials and production data never belong in this repo.
+/.creator-toolkit/
+/jobs/
+/media/
+/reference/
+/tracking/
+/reports/
+/tmp/
+/dist/
+.env
+.env.*
+*.pem
+*.key
+/.venv/
+/venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.video-workflow-cache/
+# Generated application adapters; canonical skills live in skills/.
+/.agents/
+/.claude/
+.DS_Store
+Thumbs.db
+~$*

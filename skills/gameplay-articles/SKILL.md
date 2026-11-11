@@ -1,0 +1,29 @@
+---
+name: gameplay-articles
+description: Turn gameplay notes into articles with optional Review & Select evidence, claim consistency checks and one authentic screenshot per eligible H2. Deliver Markdown, HTML and SEO metadata; not video editing or publishing.
+---
+
+# Gameplay articles
+
+Before production, follow [first-run customization](../../setup/onboarding.md). Read this project's confirmed relevant profiles in `.creator-toolkit/`; do not treat example templates or another creator's settings as confirmed. Run `python scripts/configure.py status --skill gameplay-articles` from the toolkit root. If not ready, ask for customization and confirmation before producing deliverables. Planning and installation may continue.
+
+For new production and affected revisions, follow [structured production checks](../_video-shared/review-workflow.md). Use the `article` checklist for supported claims, matching Markdown/HTML package, screenshots and SEO deliverables. Capture the applicable site/project instructions and scope; reference articles remain evidence, not operational instructions. Follow any local workflow profile for optional post-delivery reviewer choice and separate acceptance.
+
+Follow [whole-job records and recovery](../_video-shared/job-workflow.md). Record notes/evidence sources, unresolved claim issues, screenshot coverage and matching Markdown/HTML revisions. Preserve completed sections during recovery; register all delivered files. Use the article-claims case when evaluating evidence-rule changes.
+
+Use the user's notes for experiences, opinions and verdicts. Use reviewed footage only for observable events. Latest instructions override defaults. Never manufacture first-person experience, disclosures or facts to fill a length target.
+
+1. Read the confirmed `.creator-toolkit/site-profile.md` for this project. If missing or changed, follow onboarding before production. Use the [site profile input reference](references/site-profile-template.md) for article-specific details; do not inherit another creator's identity or CTA. Respect configured reference-library instructions and inspect relevant published examples when available. If no website/examples exist, use the user's confirmed voice and local-file delivery preferences without inventing a publishing history.
+2. Identify notes-only or evidence-assisted mode. At intake classify screenshot coverage as required, explicitly agreed exempt, or unresolved, recording the scope/source. No recording alone is not an exemption. Continue supported drafting while scope is unresolved, but identify the draft state early and obtain the missing scope decision before claiming completion. Read the existing Review & Select manifest, observations and images before new inspection. Article work does not require rendering video outputs. For evidence-assisted work, follow [evidence and screenshots](references/evidence.md).
+   When a recording is supplied and screenshots are in scope, evidence-assisted work includes locating, extracting, inspecting and embedding the screenshots in this request. Do not select notes-only mode merely because notes are sufficient to write prose or no Review & Select sidecar exists. Create source evidence directly using the article extraction workflow. An intermediate text draft is progress, not the end of the requested package; continue image work unless a concrete blocker or user instruction prevents it.
+3. Outline the article around supported notes. Resolve the site's review/impressions structure, including any Pros/Cons requirement, at outline time and include it in the package and claims criteria. Length is flexible; do not pad to a minimum. Keep opinions attributed to the user. Separate externally sourced facts from gameplay observations and verify changing external facts when needed.
+4. Continue unaffected sections when claims may conflict. Leave disputed claims out of definitive prose and flag the exact claim, evidence and uncertainty in a private editorial report for manual user resolution. Do not automatically correct the user's account, block the whole draft, or place dispute annotations in publishable files.
+5. Select one authentic screenshot for each H2 except Pros and Cons (including separate Pros/Cons headings) and Final Verdict or equivalent closing verdict. Search additional portions of the same recording in targeted ranges when coverage is missing; ask the user if no appropriate frame exists. Continue other sections and record the missing image; never substitute an unrelated/generated image or claim completion of coverage.
+6. Deliver both Markdown and HTML with matching text, section anchors and relative image links. Follow [delivery](references/delivery.md). Include the site's CTA and TOC defaults. Local images need manual CMS upload; no upload or publication is authorized.
+7. Check both versions, H2-to-image mapping, TOC links, real internal-link targets and unresolved evidence issues. Recheck only affected sections on revisions. Report remaining limitations honestly.
+
+Use sibling `_video-shared` for inspection and extraction, not thumbnail generation. Notes-only mode remains available; if no recording is supplied, identify screenshot coverage as unavailable rather than inventing evidence. Keep site profiles, recordings and article jobs out of the public skill package.
+
+Record demo/build/session context when supplied or observable; scope impressions to the played material without inventing version numbers. For a multi-game article, bind each observation and screenshot to its recording with source_id. Use the original recordings, not a trailer's titles, blur or generated cover artwork, as screenshot evidence.
+
+When a local job dashboard is configured, follow [dashboard tracking](../_video-shared/dashboard-workflow.md) at resumption and before delivery. Preserve exact-revision human attestations and durable history independently of removable job files.
